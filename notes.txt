@@ -1,0 +1,87 @@
+git log -1 (number of latest commits)
+git log --abbrev-commit
+git show (either abbrev or full log)
+
+git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        anythingyoulike.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git add anythingyoulike.txt
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   anythingyoulike.txt
+
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git commit
+[master (root-commit) 20797dd] new message per requirement without sending message in git commit statement
+ 1 file changed, 1 insertion(+)
+ create mode 100644 anythingyoulike.txt
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git commit -m
+error: switch `m' requires a value
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git log
+commit 20797dd567fcc695edee22261c3247f0ffdaf20f (HEAD -> master)
+Author: Edgar Irle <edgar.irle@sage.com>
+Date:   Wed Aug 21 10:07:27 2019 +0200
+
+    new message per requirement without sending message in git commit statement
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git log -1
+commit 20797dd567fcc695edee22261c3247f0ffdaf20f (HEAD -> master)
+Author: Edgar Irle <edgar.irle@sage.com>
+Date:   Wed Aug 21 10:07:27 2019 +0200
+
+    new message per requirement without sending message in git commit statement
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git log
+commit 20797dd567fcc695edee22261c3247f0ffdaf20f (HEAD -> master)
+Author: Edgar Irle <edgar.irle@sage.com>
+Date:   Wed Aug 21 10:07:27 2019 +0200
+
+    new message per requirement without sending message in git commit statement
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git log --abbrev-commit
+commit 20797dd (HEAD -> master)
+Author: Edgar Irle <edgar.irle@sage.com>
+Date:   Wed Aug 21 10:07:27 2019 +0200
+
+    new message per requirement without sending message in git commit statement
+
+Edgar.Irle@SAGPTANB6WDB3G2 MINGW64 /c/GitRepo/learngit (master)
+$ git show 20797dd
+commit 20797dd567fcc695edee22261c3247f0ffdaf20f (HEAD -> master)
+Author: Edgar Irle <edgar.irle@sage.com>
+Date:   Wed Aug 21 10:07:27 2019 +0200
+
+    new message per requirement without sending message in git commit statement
+
+diff --git a/anythingyoulike.txt b/anythingyoulike.txt
+new file mode 100644
+index 0000000..55a09b5
+--- /dev/null
++++ b/anythingyoulike.txt
+@@ -0,0 +1 @@
++added something
+\ No newline at end of file
